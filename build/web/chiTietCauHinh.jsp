@@ -73,7 +73,7 @@
                     </table>
                     <div style="text-align: center">
                         <button id="submit" type="submit" class="btn btn-danger">Lưu</button>
-
+                        <a id="cancel" class="btn btn-secondary" href="gdcauhinh.jsp">Hủy</a>    
                     </div>
 
                 </form>
