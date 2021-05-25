@@ -7,6 +7,7 @@ package entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -67,6 +68,42 @@ public class Hospital {
 
     public void setIsNetwork(int isNetwork) {
         this.isNetwork = isNetwork;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Hospital other = (Hospital) obj;
+        if (this.hospital_id != other.hospital_id) {
+            return false;
+        }
+        if (this.isNetwork != other.isNetwork) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.address, other.address)) {
+            return false;
+        }
+        if (!Objects.equals(this.listDisease, other.listDisease)) {
+            return false;
+        }
+        return true;
     }
     
 }

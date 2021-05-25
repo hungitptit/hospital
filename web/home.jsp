@@ -37,16 +37,16 @@ btn{
   
      <div style="text-align: center">
      <br>
-       	<a type="button" class="btn btn-success"
+       	<a type="button" class="btn btn-success" style="width: 300px"
         href="theodoids.jsp">Theo dõi danh sách</a></td>
         <br>
         <br>
-        <a type="button" class="btn btn-success"
-        href="/gdlenlich">Xuất báo cáo</a></td>
+        <a type="button" class="btn btn-success" style="width: 300px"
+        href="gdtimnguoi.jsp">Xuất báo cáo</a></td>
      	<br>
      	<br>
-        <a type="button" class="btn btn-success"
-        href="/gdxemtk">Cấu hình</a></td>
+        <a type="button" class="btn btn-success" style="width: 300px"
+        href="gdxemtk">Cấu hình</a></td>
      
      </div>
      	

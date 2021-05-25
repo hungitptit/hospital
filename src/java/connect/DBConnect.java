@@ -13,8 +13,8 @@ public static Connection conn;
      
     public DBConnect(){
         if(conn == null){
-            String dbUrl = "jdbc:mysql://localhost:3306/hospitaldb?autoReconnect=true&useSSL=false";
-            String dbClass = "com.mysql.jdbc.Driver";
+            String dbUrl = "jdbc:mysql://localhost:3306/hospital?autoReconnect=true&useSSL=false";
+            String dbClass = "com.mysql.cj.jdbc.Driver";
  
             try {
                 Class.forName(dbClass);

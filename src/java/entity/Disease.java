@@ -5,6 +5,8 @@
  */
 package entity;
 
+import java.util.Objects;
+
 /**
  *
  * @author Lenovo
@@ -19,13 +21,23 @@ public class Disease {
     public Disease() {
     }
 
-    public Disease(int disease_id, int person_id, int hospital_id, String name) {
+    public Disease(int disease_id, int person_id, int hospital_id, String name, String khoa) {
         this.disease_id = disease_id;
         this.person_id = person_id;
         this.hospital_id = hospital_id;
         this.name = name;
+        this.khoa = khoa;
     }
 
+    public String getKhoa() {
+        return khoa;
+    }
+
+    public void setKhoa(String khoa) {
+        this.khoa = khoa;
+    }
+
+ 
     public int getDisease_id() {
         return disease_id;
     }
@@ -56,6 +68,42 @@ public class Disease {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Disease other = (Disease) obj;
+        if (this.disease_id != other.disease_id) {
+            return false;
+        }
+        if (this.person_id != other.person_id) {
+            return false;
+        }
+        if (this.hospital_id != other.hospital_id) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.khoa, other.khoa)) {
+            return false;
+        }
+        return true;
     }
     
 }

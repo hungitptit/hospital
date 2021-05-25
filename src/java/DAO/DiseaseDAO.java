@@ -31,7 +31,7 @@ public class DiseaseDAO extends connect.DBConnect{
             rs = ps.executeQuery();
             List<Disease> list = new ArrayList<>();
             while(rs.next()) {
-                Disease disease = new Disease(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getString(4));
+                Disease disease = new Disease(rs.getInt(1),rs.getInt(3),rs.getInt(2),rs.getString(4),rs.getString(5));
                 list.add(disease);
             }
             return list;
@@ -52,11 +52,11 @@ public class DiseaseDAO extends connect.DBConnect{
             List<Disease> list = new ArrayList<>();
             while(rs.next()) {
                 int id = rs.getInt(1);
-                int person_id = rs.getInt(2);
-                int hospital_id = rs.getInt(3);
+                int person_id = rs.getInt(3);
+                int hospital_id = rs.getInt(2);
                 String diseaseName = rs.getString(4);
-                
-                Disease disease = new Disease(id, person_id, hospital_id, diseaseName);
+                String khoa = rs.getString(5);
+                Disease disease = new Disease(id, person_id, hospital_id, diseaseName, khoa );
                 list.add(disease);
                 //rs.deleteRow();
             }
@@ -67,4 +67,5 @@ public class DiseaseDAO extends connect.DBConnect{
         
         return null;
     } 
+    
  }

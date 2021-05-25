@@ -23,7 +23,23 @@ public class Person {
     private String cmt;
     private String sothebaohiem;
     private String address;
-    
+    private int muabaohiem;
+    private Bhyt bhyt;
+    public int getMuabaohiem() {
+        return muabaohiem;
+    }
+
+    public Bhyt getBhyt() {
+        return bhyt;
+    }
+
+    public void setBhyt(Bhyt bhyt) {
+        this.bhyt = bhyt;
+    }
+
+    public void setMuabaohiem(int muabaohiem) {
+        this.muabaohiem = muabaohiem;
+    }
     private List<Disease> listDisease;
 
     public Person(int person_id, String name, int account_id, String phoneNumber, Date dob, String email, String cmt, String sothebaohiem, String address) {

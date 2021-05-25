@@ -43,7 +43,7 @@ public class LoginControl extends HttpServlet {
             if (a==null){
                 response.sendRedirect("Login.jsp");
             } else {
-                response.sendRedirect("hospital.jsp");
+                response.sendRedirect("home.jsp");
             }
         }
     }

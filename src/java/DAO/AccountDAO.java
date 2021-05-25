@@ -30,7 +30,7 @@ public class AccountDAO extends connect.DBConnect{
             rs = ps.executeQuery();
             List<Account> list = new ArrayList<>();
             while(rs.next()) {
-                Account a = new Account(rs.getString(1),rs.getString(2));
+                Account a = new Account(rs.getString(2),rs.getString(3));
                 list.add(a);
             }
             return list;
@@ -39,5 +39,13 @@ public class AccountDAO extends connect.DBConnect{
         }
         
         return null;
+    }
+       public static List<Account> getEmpList(){
+        List<Account> expResult = new ArrayList<>();
+        expResult.add(new Account("hungitptit","manutd1998"));
+        expResult.add(new Account("huynghiem1999","123456"));
+        expResult.add(new Account("hungng132","124bdsa"));
+        expResult.add(new Account("ngoduchung2931","1283ojlsd"));
+        return expResult;
     }
 }
