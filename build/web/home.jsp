@@ -45,8 +45,8 @@ btn{
         href="/gdlenlich">Xuất báo cáo</a></td>
      	<br>
      	<br>
-        <a type="button" class="btn btn-success"
-        href="/gdxemtk">Cấu hình</a></td>
+        <a id="cauhinh" type="button" class="btn btn-success"
+        href="gdcauhinh.jsp">Cấu hình</a></td>
      
      </div>
      	
